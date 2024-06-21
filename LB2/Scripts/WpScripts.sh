@@ -47,19 +47,7 @@ sudo tee /etc/apache2/sites-available/$SERVER_NAME.conf >/dev/null <<EOF
     </Directory>
 </VirtualHost>
 
-<IfModule mod_ssl.c>
-    <VirtualHost *:443>
-        ServerName $SERVER_NAME
-        DocumentRoot /var/www/$DIR_NAME
-        ErrorLog ${APACHE_LOG_DIR}/error.log
-        CustomLog ${APACHE_LOG_DIR}/access.log combined
-	<Directory /var/www/$DIR_NAME>
-            Options Indexes FollowSymLinks
-            AllowOverride All
-            Require all granted
-    	</Directory>
-    </VirtualHost>
-</IfModule>
+
 EOF
 
 # Enable the new site
