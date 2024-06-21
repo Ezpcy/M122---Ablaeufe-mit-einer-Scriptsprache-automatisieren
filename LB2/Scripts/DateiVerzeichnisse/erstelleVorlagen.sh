@@ -11,7 +11,7 @@ touch "_templates/datei-3.doc"
 # Erstelle _schulklassen Ordner
 mkdir -p "_schulklassen"
 
-# Namen für die verschiedenen Klassen
+# Namen
 names1=("Anna Müller" "Max Mustermann" "Lisa Schmidt" "Sophia Schneider" 
         "Hans Meier" "Julia Klein" "Elias Becker" "Leonie Braun" 
         "Finn Schwarz" "Emilia Fischer" "Lukas Weber" "Marie Neumann")
@@ -24,7 +24,7 @@ names3=("Tobias Winter" "Emily Jung" "Lukas Beck" "Amelie Meyer"
         "Moritz Lang" "Charlotte Schmid" "Alexander Hoffmann" "Marie Krämer" 
         "Felix Zimmermann" "Lara Werner" "Simon Schwarz" "Stefanie Maier")
 
-# Funktion zum Erstellen von Schulklassen-Dateien mit individuellen Namen
+# Funktion
 create_class_file() {
     local class_file="$1"
     shift
@@ -34,7 +34,7 @@ create_class_file() {
     done
 }
 
-# Erzeuge drei Schulklassen-Dateien und fülle sie mit verschiedenen Schülernamen
+# Schulklassen Daten erstellen
 create_class_file "_schulklassen/M122-AP22b.txt" "${names1[@]}"
 create_class_file "_schulklassen/M122-AP22c.txt" "${names2[@]}"
 create_class_file "_schulklassen/M122-AP22d.txt" "${names3[@]}"
